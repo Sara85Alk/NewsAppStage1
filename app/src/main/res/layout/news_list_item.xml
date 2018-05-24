@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
+
+    <!-- Section Name & Date/Time wrapper -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:weightSum="6">
+
+        <!-- Section Name -->
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:id="@+id/section_name"
+            tools:text="@string/Technology" />
+
+        <!-- Date/Time wrapper -->
+        <LinearLayout
+            android:id="@+id/date_time_wrapper"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="15sp"
+                tools:text="Mar 6, 2010" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/time"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                tools:text="3:00 PM" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Image/Title wrapper -->
+    <LinearLayout
+        android:id="@+id/image_title_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:weightSum="6">
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/image"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="20dp" />
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                tools:text="@string/news" />
+
+            <!-- Author name -->
+            <TextView
+                android:id="@+id/author_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                tools:text="John Smith" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
